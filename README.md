@@ -173,3 +173,15 @@ Avec un browser, vous verrez ouvrir une fenêtre.
 
 C'est une question de goût : certains préfèrent le commandline
 (ipython), d'autres l'interface notebook (jupyter).
+
+
+## Git clone
+
+Il convient d'avoir une copie de ce repository en local que vous
+pouvez facilement mettre à jour.  Pour ce faire, le plus facile est
+tout simplement
+
+    $ git clone https://github.com/JeffAbrahamson/IMIE-2019-08.git
+
+Plus tard, vous aurez la possibilité de faire un `git pull` afin de
+récupérer toute modification ultérieur à votre clone.
