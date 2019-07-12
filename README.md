@@ -13,6 +13,10 @@ chaque soir qui reprendront ce que vous avez fait en TD afin de vous
 permettre de vérifier que vous êtes capable de faire ce que vous venez
 de faire.
 
+À la fin du dernier jour du cours, il y aura un contrôle global qui
+comportera une partie purement informatique (à soumettre avec un `git
+push`) et une partie écrite sur papier.
+
 Ce document vous offre un aperçu préliminaire des pré-requis que vous
 devez maîtriser avant le début du cours.  De légères modification sont
 possibles suivant vos retours éventuels.
