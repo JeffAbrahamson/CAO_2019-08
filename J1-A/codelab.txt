@@ -1,0 +1,3 @@
+pandas
+matplotlib
+questions from lecture
