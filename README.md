@@ -7,7 +7,7 @@ Les proportions seront établies entre le professeur et les étudiants,
 surtout en vue de la capacité des étudiants à avancer dans le sujet.
 Vous aurez également de courtes évaluations écrites en début de chaque
 séance (tous les matins et tous les après-midi) afin d'éviter ce
-phénomène tellement connu et peu discuter où on pense avoir compris
+phénomène tellement connu et peu discuté où on pense avoir compris
 sans avoir réellement compris.  Il y aura des (petits) projets à faire
 chaque soir qui reprendront ce que vous avez fait en TD afin de vous
 permettre de vérifier que vous êtes capable de faire ce que vous venez
@@ -15,7 +15,7 @@ de faire.
 
 À la fin du dernier jour du cours, il y aura un contrôle global qui
 comportera une partie purement informatique (à soumettre avec un `git
-push`) et une partie écrite sur papier.
+push`), une partie écrite sur papier, et une courte présentation orale.
 
 Ce document vous offre un aperçu préliminaire des pré-requis que vous
 devez maîtriser avant le début du cours.  De légères modification sont
@@ -32,7 +32,7 @@ D'ailleurs, ce serait bien d'avoir au moins des notions mathématiques :
 * algèbre linéaire
 * probabilité
 
-Vous pouvez offrir des retours sur le cours par mél direct, par issue
+Vous pouvez offrir des retours sur le cours par mél direct, par _issue_
 sur ce repo, ou par PR, selon ce que vous trouvez le plus adapté.
 
 
@@ -90,7 +90,7 @@ d'exploitation) relativement simple.
 
 ### Linux
 
-C'est un de rare cas dans la vie où tout est plus facile sur linux.
+C'est un des cas rares dans la vie où tout est plus facile sur linux.
 Afin, pour une certain définition de "facile".  Il suffit d'installer
 python3 (attention : souvent python = python2) et virtualenv.
 Virtualenv vous crée un environnement pour python largement
@@ -189,3 +189,6 @@ tout simplement
 
 Plus tard, vous aurez la possibilité de faire un `git pull` afin de
 récupérer toute modification ultérieur à votre clone.
+
+En outre, certains exercices seront à renvoyer par PR (pull request).
+Le plus facile serait sans doute de faire un fork.
