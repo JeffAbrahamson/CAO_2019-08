@@ -1,6 +1,6 @@
 # Machine Learning
 
-Bienvenu au Machine Learning à IMIE !
+Bienvenu au Machine Learning à Campus Académie Ouest !
 
 Ce cours comportera un mixe de cours magistraux et de travaux dirigés.
 Les proportions seront établies entre le professeur et les étudiants,
@@ -185,7 +185,7 @@ Il convient d'avoir une copie de ce repository en local que vous
 pouvez facilement mettre à jour.  Pour ce faire, le plus facile est
 tout simplement
 
-    $ git clone https://github.com/JeffAbrahamson/IMIE-2019-08.git
+    $ git clone https://github.com/JeffAbrahamson/CAO-2019-08.git
 
 Plus tard, vous aurez la possibilité de faire un `git pull` afin de
 récupérer toute modification ultérieur à votre clone.
