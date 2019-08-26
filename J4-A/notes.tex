@@ -1,0 +1,97 @@
+\input ../../notes-header.tex
+
+\begin{document}
+
+\notetitle{J2-2}{ANN}
+
+\section{Perceptron}
+
+Controversy
+\begin{itemize}
+\item Led to AI stagnating, though not immediately nor only because of this
+\item Minsky and Papert book showed impossible to learn XOR
+\item Often believed (incorrectly) that they claimed same result for multi-layer perceptron
+\item ANN research resurgence in the 1980's
+\end{itemize}
+
+Algorithm
+\begin{itemize}
+\item Talk about binary classifier
+\item Talk about bias term meaning
+\item Talk about weights meaning
+\item Talk about decision boundary
+  \vspace{2mm}
+\item Algorithm doesn't terminate if not linearly separable
+\item Perceptron is the simplest instance of a feedforward neural network
+  \vspace{2mm}
+\item Initialize weights randomly (or to zero)
+\item For each input, compute output
+\item Update weights by adding $\alpha$ if correct
+\end{itemize}
+
+Convergence
+\begin{itemize}
+\item If not linearly separable, don't even get an approximate solution
+\item If linearly separable, then upper bound on number of times weights updated
+\item Solution quality not guaranteed
+\item ``Perceptron of optimal stability'' now known as SVM
+\end{itemize}
+
+\section{Overview, Neurons, and deep learning}
+
+Review
+\begin{itemize}
+\item \fbox{WTF is deep learning? ($\times 2$)}
+\item \fbox{Supervised, reinforcement, unsupervised}
+\item \fbox{Supervised = regression, classification ($\times 3$)}
+\item \fbox{Labels are expensive ($\times 3$)}
+\end{itemize}
+
+Deep nets
+\begin{itemize}
+\item \fbox{Architectures}
+\item \fbox{Applications}
+\item \fbox{Data sets ($\times 2$)}
+\item \fbox{Hardware ($\times 5$)}
+\item \fbox{Brains ($\times 2$)}
+\item \fbox{Neurons} ($\times 3$ each)
+  \begin{itemize}
+  \item linear
+  \item binary threshold
+  \item rectified linear
+  \item sigmoid
+  \item stochastic binary
+  \end{itemize}
+\end{itemize}
+
+Example: handwriting ($\times 6$)
+
+Architectures ($\times 10$)
+
+History ($\times 4$)
+
+Perceptron ($\times 5$)
+
+Progress ($\times 5$)
+
+Hinton ($\times 5$)
+
+2011 (before, then since)
+
+Basic ideas ($\times 3$)
+
+\section{Restricted Boltzmann Machines}
+
+Convolution:
+\begin{displaymath}
+  f(t)\ast g(t) = (f\ast g)(t) \vcentcolon = \int_{-\infty}^{\infty} f(\tau) g(t-\tau) d\tau
+\end{displaymath}
+
+Examples (gif's):
+\begin{itemize}
+\item Sliding windows
+\item Rolling mean
+\end{itemize}
+
+
+\end{document}
