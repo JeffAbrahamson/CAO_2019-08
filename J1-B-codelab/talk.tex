@@ -1,0 +1,234 @@
+\input ../talk-header.tex
+\title{Python}
+\subtitle{Introduction}
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command: 
+%\beamerdefaultoverlayspecification{<+->}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{}
+  \vphrase{scikit-learn}
+\end{frame}
+
+\begin{frame}{Datasets (1)}
+  \texttt{import sklearn as sk}\\
+  \texttt{from sklearn import datasets}\\[2mm]
+  \texttt{iris = datasets.load\_iris()}
+  \texttt{digits = datasets.load\_digits()}
+
+  \bigskip
+  Look at
+  \begin{itemize}
+  \item  \blue{\texttt{iris.data.size}}
+  \item  \blue{\texttt{iris.data.shape}}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Datasets (2)}
+  \texttt{load\_diabetes}\\
+  \texttt{load\_boston}\\
+  \texttt{load\_linnerud}\\
+  \texttt{load\_wine}\\
+  \texttt{load\_breast\_cancer}
+\end{frame}
+
+\begin{frame}{Datasets (3)}
+  \begin{itemize}
+  \item \texttt{data} : \texttt{n\_samples}, \texttt{n\_features}
+  \item \texttt{target} : response variables
+  \item \texttt{target\_names}
+  \item \texttt{DESCR} : try \texttt{print()}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Classification}
+  \texttt{from sklearn import svm}\\[1mm]
+  \texttt{clf = svm.SVC(gamma=0.001, C=100.)}\\
+  \texttt{clf.fit(digits.data[:-1], digits.target[:-1])}\\
+  \texttt{clf.predict(digits.data[-1:])}
+\end{frame}
+
+\begin{frame}{matplotlib}
+
+  {\tt
+    import numpy as np \\
+    \%matplotlib inline     {\purple{\small{\# Optional: Jupyter notebook}}} \\
+    from matplotlib import pyplot as plt \\[4mm]
+    x = np.arange(1, 11) \\
+    y = 2 * x + 5 \\
+    plt.title("Matplotlib demo") \\
+    plt.xlabel("x axis caption") \\
+    plt.ylabel("y axis caption") \\
+    plt.plot(x, y) \\
+    plt.show()
+  }
+\end{frame}
+
+\begin{frame}{matplotlib}
+
+  {\tt
+    import numpy as np \\
+    \%matplotlib inline     {\purple{\small{\# Optional: Jupyter notebook}}} \\
+    from matplotlib import pyplot as plt \\[4mm]
+    x = np.arange(1, 11) \\
+    y = 2 * x + 5 \\
+    plt.title("Matplotlib demo") \\
+    plt.xlabel("x axis caption") \\
+    plt.ylabel("y axis caption") \\
+    plt.plot(x, y, 'dr') \\
+    plt.show()
+  }
+\end{frame}
+
+\begin{frame}{}
+
+  {\tt
+    import numpy as np \\
+    import matplotlib.pyplot as plt  \\[4mm]
+    x = np.arange(0, 3 * np.pi, 0.1) \\
+    y = np.sin(x) \\
+    plt.title("sine wave form") \\
+    plt.plot(x, y, 'g') \\
+    plt.show() 
+  }
+\end{frame}
+
+\begin{frame}{}
+
+  {\tt\small
+    import numpy as np \\
+    import matplotlib.pyplot as plt  \\[4mm]
+
+    x = np.arange(0, 3 * np.pi, 0.1) \\
+    y\_sin = np.sin(x) \\
+    y\_cos = np.cos(x) \\[2mm]
+
+    \purple{\# Set up a subplot grid that has height 2 and width 1,}\\
+    \purple{\# and set the first such subplot as active.}\\
+    plt.subplot(2, 1, 1)\\
+    \purple{\# Make the first plot}\\
+    plt.plot(x, y\_sin) \\
+    plt.title('Sine')  \\
+    \purple{\# Set the second subplot as active, and make the second plot.}\\
+    plt.subplot(2, 1, 2) \\
+    plt.plot(x, y\_cos) \\
+    plt.title('Cosine') \\[2mm]
+    plt.show()
+  }
+\end{frame}
+
+\begin{frame}{}
+
+  {\tt
+    x = [5,8,10] \\
+    y = [12,16,6]  \\[2mm]
+    x2 = [6,9,11] \\
+    y2 = [6,15,7] \\
+    plt.bar(x, y, align = 'center') \\
+    plt.bar(x2, y2, color = 'g', align = 'center') \\
+    plt.title('Bar graph') \\
+    plt.ylabel('Y axis') \\
+    plt.xlabel('X axis')  \\[2mm]
+    plt.show()
+  }
+\end{frame}
+
+\begin{frame}
+  \vfill
+  \bf{\large\blue{\url{https://matplotlib.org/tutorials/introductory/sample_plots.html}}}
+  \vfill
+\end{frame}
+
+\begin{frame}{matplotlib}
+  \vphrase{\url{https://matplotlib.org/gallery/}}
+\end{frame}
+
+\begin{frame}{seaborn}
+
+  {\tt
+    import seaborn as sns \\[4mm]
+    tips = sns.load\_dataset("tips")
+    sns.relplot(x="total\_bill", y="tip", data=tips)\\[2mm]
+    plt.show()
+  }
+\end{frame}
+
+\begin{frame}{seaborn}
+  
+  {\tt sns.relplot(x="total\_bill", y="tip", \\
+    \hspace{1cm} hue="smoker", data=tips)}
+\end{frame}
+
+\begin{frame}{seaborn}
+  
+  {\tt sns.relplot(x="total\_bill", y="tip",\\
+    \hspace{1cm} hue="smoker", style="smoker",
+    data=tips);
+  }
+\end{frame}
+
+\begin{frame}{seaborn}
+
+  {\tt
+    sns.relplot(x="total\_bill", y="tip",\\
+    \hspace{1cm} size="size", sizes=(15, 200), data=tips);
+  }
+\end{frame}
+
+\begin{frame}{seaborn and random walks}
+
+  {\tt
+    df = pd.DataFrame(dict(time=np.arange(500),\\
+        \hspace{2cm} value=np.random.randn(500).cumsum()))\\
+    g = sns.relplot(x="time", y="value", kind="line", data=df)\\
+    g.fig.autofmt\_xdate()\\
+  }
+\end{frame}
+
+\begin{frame}{More random walks}
+
+  {\tt
+    df = pd.DataFrame(np.random.randn(500, 2).\\
+    \hspace{1cm} cumsum(axis=0), columns=["x", "y"])
+    sns.relplot(x="x", y="y", sort=False, \\
+    \hspace{1cm} kind="line", data=df);
+  }
+\end{frame}
+
+\begin{frame}{More seaborn examples}
+
+  \blue{\bf\url{https://seaborn.pydata.org/tutorial/relational.html}}
+\end{frame}
+
+\begin{frame}{Seaborn and categorical data}
+
+  \blue{\bf\url{https://seaborn.pydata.org/tutorial/categorical.html}}
+\end{frame}
+
+\begin{frame}{Seaborn and distributions}
+  \blue{\bf\url{https://seaborn.pydata.org/tutorial/distributions.html}}
+\end{frame}
+
+\begin{frame}{Pour la prochaine fois}
+  \vphrase{la même chose mais plus sophistiqué}
+
+  \centerline{\url{J2/travail-pour-la-prochaine-fois.txt}}
+
+  \bigskip
+  \centerline{N'oubliez pas le tutoriel d'Addfor.}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\talksection{Break}
+
+\begin{frame}
+  \frametitle{Questions?}
+\end{frame}
+
+\end{document}

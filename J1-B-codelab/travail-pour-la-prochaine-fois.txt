@@ -1,0 +1,32 @@
+Regarder d'autres données des compétitions Kaggle.
+
+    https://www.kaggle.com/
+
+Un bon point de départ est celui-ci :
+
+    https://www.kaggle.com/helgejo/an-interactive-data-science-tutorial
+    http://www.awesomestats.in/python-pandas-titanic/
+
+Regardez également des jeux de données dans scikit-learn et de
+seaborn.  (Vous pouvez également choisir un jeu de données qui vous
+passionne.)
+
+Maintenant, imaginez que vous êtes en poste.  (Selon vos intérêts,
+vous pouvez définir sa nature : équipe de data science chez un bon
+journal, équipe de déontologie dans un hôpital ou service de secours,
+banque d'investissement, etc.)  Votre chef vous dit qu'il a un intérêt
+à présenter les données du Titanic au comité de X (selon contexte...).
+Il veut raconter une histoire basée sur les données.
+
+Définissez votre contexte et l'objectif du patron.  Expliquez la (les)
+question(s) que vous abordez.  Racontez l'histoire.
+
+La prochaine fois, vous aurez chacun une minute pour jouer votre rôle
+et raconter votre histoire.  Le chef est très occupé, il n'a qu'une
+minute (60 secondes) pour entendre votre résumé.
+
+Vous êtes censé pouvoir répondre aux questions techniques.  Par
+contre, c'est un exercice : pour vos visuels, n'hésitez pas à
+simplement retourner votre écran ou même de montrer une feuille de
+papier sur laquelle vous avez dessinez vous-même vos visualisations.
+Penchez toutefois sur les libraries de visualisation python.
