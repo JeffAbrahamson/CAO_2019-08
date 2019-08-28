@@ -1,0 +1,32 @@
+###########################################################################
+## 1.
+
+import pandas as pd
+from matplotlib.pyplot import plt
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn import metrics
+import seaborn as sn
+
+x = []
+for i in range(10):
+    for j in range(10 - i):
+        x.append([i, j])
+
+y = []
+for j in range(10):
+    for i in range(10 - j, 10):
+        y.append([i, j])
+
+
+# Faire une régression logistique.
+# La visualiser
+
+
+###########################################################################
+## 2.
+
+Pour la prochaine fois :
+
+La même chose que la dernière fois mais utiliser une régression
+linéaire ou logistique (et matplotlib).
