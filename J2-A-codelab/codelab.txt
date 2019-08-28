@@ -1,0 +1,111 @@
+######################################################################
+## 1.
+
+>>> import numpy as np
+>>> from sklearn.linear_model import LinearRegression
+>>> X = np.array([[1, 1], [1, 2], [2, 2], [2, 3]])
+>>> # y = 1 * x_0 + 2 * x_1 + 3
+>>> y = np.dot(X, np.array([1, 2])) + 3
+>>> reg = LinearRegression().fit(X, y)
+>>> reg.score(X, y)
+1.0
+>>> reg.coef_
+array([1., 2.])
+>>> reg.intercept_ 
+3.0000...
+>>> reg.predict(np.array([[3, 5]]))
+array([16.])
+
+
+######################################################################
+## 2.
+
+import random
+
+def f(x):
+    res = x* 25 + 3
+    error = res * random.uniform(-0.01, 0.01)
+    return res + error
+
+values = []
+for i in range(0, 300):
+    x = random.uniform(1, 1000)
+    y = f(x)
+    values.append((x, y))
+
+# Explorer.
+# Visualiser.
+# Essayer avec bruit gaussian, non-gaussian
+# Les résidus ici sont uniforms !  Comment pouvez-vous le voir ?
+
+
+######################################################################
+## 3.
+
+# Météorologie lors de le débarquement de Normandie
+
+import pandas as pd  
+import numpy as np  
+import matplotlib.pyplot as plt  
+import seaborn as sns 
+from sklearn.model_selection import train_test_split 
+from sklearn.linear_model import LinearRegression
+from sklearn import metrics
+%matplotlib inline
+
+data = pd.read_csv('weather.csv')
+data.shape    # (119040, 31)
+data.describe
+
+# Explorer.  Exemple, mintemp vs maxtemp.
+
+# Ou distributions
+
+    plt.figure(figsize=(15,10))
+    plt.tight_layout()
+    seabornInstance.distplot(dataset['MaxTemp'])
+
+# Train a linear regression of min vs max temp with test-train split
+# of 20%.
+
+# Comparer les y et ŷ (exemple : bar chart, scatter plot, distribution Δy²)
+
+# Résidus
+# MAE  (mean absolute error)
+# MSE  (mean squared error)
+# RMSE (root mean squared error)
+
+
+######################################################################
+## 4.
+
+# wine quality - multiple regression
+
+data = pd.read_csv('winequality.csv')
+
+# Nettoyage
+dataset.isnull().any()
+# Si besoin :
+dataset = dataset.fillna(method='ffill')
+
+X = dataset[['fixed acidity', 'volatile acidity', 'citric acid',
+             'residual sugar', 'chlorides', 'free sulfur dioxide',
+	     'total sulfur dioxide', 'density', 'pH', 'sulphates',
+	     'alcohol']].values
+y = dataset['quality'].values
+
+sns.distplot(dataset['quality'])
+
+# test train split
+# régression linéaire
+
+# Interpretation des coefficients
+coeff_df = pd.DataFrame(regressor.coef_, X.columns, columns=['Coefficient'])  
+coeff_df
+
+# Explorer ŷ.
+
+
+######################################################################
+## 5.
+
