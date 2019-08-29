@@ -109,3 +109,36 @@ plt.show()
 ## Exercice : faire la même chose avec validation croisée.
 
 
+###########################################################################
+## 5.  Régression logistique
+
+from sklearn.linear_model import LogisticRegression
+
+x1 = []
+for i in range(10):
+    for j in range(9 - i):
+        x1.append([i, j])
+
+x2 = []
+for j in range(10):
+    for i in range(10 - j, 10):
+        x2.append([i, j])
+
+X = x1 + x2
+Y = [1 for a in x1] + [0 for a in x2]
+
+clf = LogisticRegression()
+clf.fit(X, Y)
+clf.predict([[0, 0]])
+
+h = .02
+x_start = y_start = -1
+x_end = y_end = 11
+xx, yy = np.meshgrid(np.arange(x_start, x_end, h), np.arange(y_start, y_end, h))
+Z = clf.predict(np.c_[xx.ravel(), yy.ravel()]).reshape(xx.shape)
+
+plt.pcolormesh(xx, yy, Z, cmap=plt.cm.Paired)
+
+plt.scatter([a for a,b in x1], [b for a,b in x1], color='r')
+plt.scatter([a for a,b in x2], [b for a,b in x2], color='b')
+plt.show()
